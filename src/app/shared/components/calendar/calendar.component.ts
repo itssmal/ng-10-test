@@ -48,12 +48,9 @@ export class CalendarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 1; i <= 31; i++) {
-      this.month.days.push(i);
-    }
   }
 
-  selectDay(date: number) {
+  public selectDay(date: number):void {
     this.selectedDate = date
   }
 }
