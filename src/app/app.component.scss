@@ -1,0 +1,19 @@
+.container {
+  padding: 10px 50px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    div:last-child {
+      margin-top: 100px;
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

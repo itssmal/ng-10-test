@@ -3,15 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { InputComponent } from './shared/components/input/input.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {ReactiveFormsModule} from '@angular/forms';
+import { NotificationComponent } from './shared/components/notification/notification.component';
+import { CalendarComponent } from './shared/components/calendar/calendar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputComponent,
+    NotificationComponent,
+    CalendarComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

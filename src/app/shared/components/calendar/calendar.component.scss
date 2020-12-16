@@ -1,0 +1,63 @@
+.cal-div {
+  font-family: 'Roboto', sans-serif;
+  p {
+    margin: 0;
+  }
+  width: 380px;
+  padding: 15px 10px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+}
+
+.week-div {
+  display: flex;
+  flex-direction: row;
+  color: #263238;
+  p {
+    margin: 0 5px;
+  }
+}
+
+.month {
+  color: #084734;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px 14px;
+  text-align: center;
+  justify-content: center;
+  &_name {
+    opacity: 60%;
+    color: #263238;
+  }
+  &_date {
+    color: #1d1d1d;
+    font-weight: 800;
+  }
+}
+
+.selected {
+  background-color: #0847343d;
+  border-radius: 10px;
+}
+.dot {
+  display: inline-block;
+  background-color: #3A4BA6;
+  border-radius: 50%;
+  width: 2px;
+  height: 2px;
+  margin: auto;
+}
