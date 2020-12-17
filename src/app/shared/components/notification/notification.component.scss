@@ -9,18 +9,22 @@
 
 .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 12px;
 }
 
 .col-1 {
   display: flex;
   flex-direction: column;
-  padding-right: 15px;
 
   h3 {
-    margin: 16px 0 0;
+    margin: 0;
     color: $dark-green-color;
+  }
+
+  p {
+    font-size: 14px;
   }
 
   button {
@@ -30,6 +34,13 @@
     border-radius: 18px;
     padding: 10px 16px;
     color: $white-color;
+    outline: none;
+    cursor: pointer;
+    transition: 50ms;
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
 }
 

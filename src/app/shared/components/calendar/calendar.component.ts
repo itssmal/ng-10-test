@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {faAngleRight, faAngleLeft} from '@fortawesome/free-solid-svg-icons';
-import {DateService} from '../../../core/service/date.service';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { DateService } from '../../../core/service/date.service';
 import * as moment from 'moment';
-import {Day, Week} from '../../../core/interfaces/calendar.interface';
+import { Day, Week } from '../../../core/interfaces/calendar.interface';
 
 @Component({
   selector: 'app-calendar',
