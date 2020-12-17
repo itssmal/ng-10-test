@@ -22,6 +22,6 @@ export class InputComponent implements OnInit {
     this.formGroup.get('formControl')?.setValue('');
   }
 
-  public onSubmit():void {
+  public onSubmit(): void {
   }
 }

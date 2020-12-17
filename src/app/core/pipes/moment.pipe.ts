@@ -7,8 +7,8 @@ import * as moment from 'moment';
 })
 export class MomentPipe implements PipeTransform {
 
-  transform(moment: moment.Moment,format = ''): string {
-    return moment.format(format);
+  transform(m: moment.Moment, format = ''): string {
+    return m.format(format);
   }
 
 }
