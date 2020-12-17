@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import {Form, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -8,7 +8,7 @@ import {Form, FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
-  faTimes = faTimes;
+  public faTimes = faTimes;
   public formGroup = new FormGroup({
     formControl: new FormControl('', Validators.required)
   });
@@ -20,5 +20,8 @@ export class InputComponent implements OnInit {
 
   public clearControl(): void {
     this.formGroup.get('formControl')?.setValue('');
+  }
+
+  public onSubmit():void {
   }
 }

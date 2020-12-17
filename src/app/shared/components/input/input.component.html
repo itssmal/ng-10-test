@@ -1,16 +1,25 @@
-<form [formGroup]="formGroup">
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
   <div class="custom-form-control">
     <div>
-      <input type="text" class="custom-input" [class.invalid-input]="formGroup.get('formControl').invalid && formGroup.get('formControl').dirty" formControlName="formControl">
-      <label [ngClass]="formGroup.get('formControl').valid ? 'valid-label' : 'invalid-label'">Input Label</label>
+      <input id="control" type="text" class="custom-input"
+             [class.invalid-input]="formGroup.get('formControl')?.invalid
+             && formGroup.get('formControl')?.dirty" formControlName="formControl">
+      <label for="control"
+        [ngClass]="formGroup.get('formControl')?.valid ? 'valid-label' : 'invalid-label'"
+      >Input Label
+      </label>
       <fa-icon [icon]="faTimes" class="input-clear"
-               *ngIf="formGroup.get('formControl').value" (click)="clearControl()"
+               *ngIf="formGroup.get('formControl')?.value" (click)="clearControl()"
       ></fa-icon>
     </div>
-    <span class="error-msg" *ngIf="formGroup.get('formControl').invalid && formGroup.get('formControl').dirty">Error Message</span>
+    <span class="error-msg" *ngIf="formGroup.get('formControl')?.invalid
+             && formGroup.get('formControl')?.dirty"
+    >Error Message
+    </span>
   </div>
   <div class="custom-form-control">
-    <input type="text" class="disabled-input" disabled placeholder="disabled">
+    <input id="disabled-control" type="text" class="disabled-input" disabled placeholder="disabled">
+    <label for="disabled-control"></label>
   </div>
 
 </form>

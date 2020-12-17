@@ -1,14 +1,14 @@
+@import "src/styles/index";
+
 .not-div {
-  font-family: 'Roboto', sans-serif;
   width: 380px;
-  background-color: #F9F9F9;
+  background-color: $light-gray-color;
   border: none;
   border-radius: 10px;
 }
 
 .row {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -17,17 +17,19 @@
   display: flex;
   flex-direction: column;
   padding-right: 15px;
+
   h3 {
     margin: 16px 0 0;
-    color: #084734;
+    color: $dark-green-color;
   }
+
   button {
     width: 135px;
-    background-color: #3A4BA6;
+    background-color: $purple-color;
     border: none;
     border-radius: 18px;
     padding: 10px 16px;
-    color: white;
+    color: $white-color;
   }
 }
 
@@ -37,12 +39,13 @@
   border-radius: 10px;
   width: 103px;
   height: 105px;
-  background-color: #0847343d;
+  background-color: rgba($dark-green-color, 10%);
+
   p {
     font-size: 12px;
     word-spacing: 5px;
     text-align: center;
-    color: #263238;
+    color: rgba($dark-gray-color, 82%);
     opacity: 82%;
     font-weight: lighter;
     margin: auto;

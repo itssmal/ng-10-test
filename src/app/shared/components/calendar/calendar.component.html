@@ -1,17 +1,25 @@
 <div class="cal-div">
   <div class="row mb-15">
-    <p class="month">{{this.month.name}}</p>
+    <p class="month">{{dateService.date | async | moment:'MMMM'}}</p>
     <div class="week-div">
-      <fa-icon [icon]="arrowLeft"></fa-icon>
-      <p>Oct 11-17</p>
-      <fa-icon [icon]="arrowRight"></fa-icon>
+      <fa-icon [icon]="arrowLeft" (click)="changeWeek(-1)"></fa-icon>
+      <p>
+        {{(dateService.date | async | moment:'MMM') + ' '
+            + (week.start | moment:'D')
+            + '-'
+            + (week.end |moment:'D')
+        }}
+      </p>
+      <fa-icon [icon]="arrowRight" (click)="changeWeek(1)"></fa-icon>
     </div>
   </div>
   <div class="row">
-    <div class="day" *ngFor="let day of month.days" [class.selected]="day.date === selectedDate" (click)="selectDay(day.date)">
-      <p class="day_name">{{day.day}}</p>
-      <p class="day_date">{{day.date}}</p>
-      <span class="dot" *ngIf="day.date === selectedDate"></span>
+    <div class="day" *ngFor="let day of week.days" (click)="selectDay(day)"
+         [class.selected]="day.selected"
+    >
+      <p class="day_name">{{day.value | moment:'ddd'}}</p>
+      <p class="day_date">{{day.value | moment:'D'}}</p>
+      <span class="dot" *ngIf="day.selected"></span>
     </div>
   </div>
 </div>
